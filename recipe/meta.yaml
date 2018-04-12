@@ -1,9 +1,9 @@
 {% set conda_name = "tableschema-py" %}
 {% set name = "tableschema" %}
-{% set version = "1.0.8" %}
+{% set version = "1.0.13" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "5be2af69a9554d63b0eda5a5cd1fa030dbd205b3376e6b6da473c97bb14be2e5" %}
+{% set hash = "ffe988396d7dc97a95bf75e2c7a553c9396d459e0f36937b48604dc277de45d0" %}
 {% set build = 0 %}
 
 package:
@@ -19,7 +19,7 @@ build:
   noarch: python
   entry_points:
     - tableschema = tableschema.cli:main
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
