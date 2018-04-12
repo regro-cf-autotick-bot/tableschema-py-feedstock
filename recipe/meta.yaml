@@ -1,9 +1,9 @@
 {% set conda_name = "tableschema-py" %}
 {% set name = "tableschema" %}
-{% set version = "1.0.0a5" %}
+{% set version = "1.0.3" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "891ff9b3ea4a01de7ef5f9608dd70929106836f9ef49706324040a2082cb7063" %}
+{% set hash = "1f451e18d40aaa46c89aee6833981c2b1e675484a9840a556d045a64c51211ff" %}
 {% set build = 0 %}
 
 package:
@@ -12,10 +12,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   entry_points:
     - tableschema = tableschema.cli:main
   number: {{ build }}
@@ -33,11 +34,10 @@ requirements:
     - requests >=2.5,<3.0
     - python-dateutil >=2.4,<3.0
     - jsonschema >=2.5,<3.0
-    - rfc3986 >=0.4,<1.0
-    - future >=0.15,<1.0
-    - unicodecsv >=0.14,<1.0
-    - isodate >=0.5.4,<1.0
-    - tabulator-py >=1.0.0a5,<2.0
+    - unicodecsv >=0.14,<2.0
+    - isodate >=0.5.4,<2.0
+    - rfc3986 >=0.4,<2.0
+    - tabulator-py >=1.3,<2.0
 
 test:
   imports:
