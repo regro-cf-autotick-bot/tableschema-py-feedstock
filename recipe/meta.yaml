@@ -1,9 +1,9 @@
 {% set conda_name = "tableschema-py" %}
 {% set name = "tableschema" %}
-{% set version = "1.0.8" %}
+{% set version = "1.2.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "5be2af69a9554d63b0eda5a5cd1fa030dbd205b3376e6b6da473c97bb14be2e5" %}
+{% set hash = "e53d850a9655d8320393ba6ccef18cf293e89860cc65988bdf8abb2ba2a1de80" %}
 {% set build = 0 %}
 
 package:
